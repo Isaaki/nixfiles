@@ -50,7 +50,8 @@
     xclip
     nodejs
     yarn
-    python39
+    python311
+    python311Packages.pip
     pkgs-unstable.cargo
     unzip
     ripgrep
