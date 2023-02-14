@@ -8,7 +8,20 @@
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
-    alacritty
+    neovim
+    wget
+    gcc
+    git
+    xclip
+    nodejs
+    python39
+    cargo
+    unzip
+    ripgrep
+    fd
+    lazygit
+    yt-dlp
+    chezmoi
   ];
 
   # This value determines the Home Manager release that your
