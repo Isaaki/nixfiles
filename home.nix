@@ -58,6 +58,7 @@
     unzip
     ripgrep
     fd
+    tree
     yt-dlp
     chezmoi
     delta

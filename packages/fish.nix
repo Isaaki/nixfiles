@@ -20,6 +20,7 @@
       gst = "git status";
       ".." = "cd ..";
       "..." = "cd ../../";
+      cls = "clear";
     };
   };
 }
