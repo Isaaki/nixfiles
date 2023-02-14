@@ -7,15 +7,9 @@
   };
 
   programs.fish = {
-    enable = true;
+    enable = false;
 
     shellAliases = {
-      # Set lsd as default ls and tree
-      # ls = "lsd";
-      # lr = "ls -R";
-      # llr = "ls -lR";
-      # tree = "ls --tree";
-
       vi = "$EDITOR";
       gst = "git status";
       ".." = "cd ..";
