@@ -4,6 +4,7 @@
   imports = [
     ./packages/neovim.nix
     ./packages/lazygit.nix
+    ./packages/fish.nix
   ];
 
   # Home Manager needs a bit of information about you and the
