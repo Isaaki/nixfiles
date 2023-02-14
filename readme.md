@@ -24,3 +24,8 @@ To update home-manager
 cd <Git Directory>
 home-manager switch --flake .#isaaki
 ```
+
+#### Tips
+When using `home-manager switch` you may get an error that looks like this `error: getting status of '/nix/store/.../flake.nix': No such file or directory`
+this is because there is an untracked file in the repo. To fix this add file to git and commit the new file/s. (https://github.com/NixOS/nix/issues/6642)
+
