@@ -52,6 +52,7 @@
     yarn
     python311
     python311Packages.pip
+    go
     pkgs-unstable.cargo
     unzip
     ripgrep
