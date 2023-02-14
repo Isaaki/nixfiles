@@ -3,6 +3,7 @@
 {
   imports = [
     ./packages/neovim.nix
+    ./packages/lazygit.nix
   ];
 
   # Home Manager needs a bit of information about you and the
@@ -10,21 +11,53 @@
   home.username = "isaaki";
   home.homeDirectory = "/home/isaaki";
 
+    # Environment variables for Isaaki
+  home.sessionVariables = {
+    EDITOR = "nvim";
+    GIT_EDITOR = "nvim";
+    VISUAL = "nvim";
+    DIFFPROG = "nvim -d";
+    MANPAGER = "nvim +Man!";
+  };
+
+  # Basic Git configuration
+  programs.git = {
+    enable = true;
+    userName = "Isak Mella";
+    userEmail = "xisaacnewton1x@gmail.com";
+    aliases = {
+      uncommit = "reset --soft HEAD^";
+    };
+    extraConfig = {
+      core.pager = "delta";
+      interactive.diffFilter = "delta --color-only --features=interactive";
+      delta = {
+        features = "decoration";
+        navigate = "true";
+        side-by-side = "true";
+        line-numbers = "false";
+      };
+      merge.conflictstyle = "diff3";
+      diff.colorMoved = "default";
+    };
+  };
+
+
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
     wget
     gcc
-    git
     xclip
     nodejs
+    yarn
     python39
     pkgs-unstable.cargo
     unzip
     ripgrep
     fd
-    lazygit
     yt-dlp
     chezmoi
+    delta
   ];
   
   # This value determines the Home Manager release that your
