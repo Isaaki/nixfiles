@@ -1,8 +1,8 @@
-{ config, pkgs, ... }:
+{ config, pkgs, pkgs-unstable, ... }:
 
 {
   imports = [
-    ./neovim.nix
+    ./packages/neovim.nix
   ];
 
   # Home Manager needs a bit of information about you and the
@@ -18,7 +18,7 @@
     xclip
     nodejs
     python39
-    cargo
+    pkgs-unstable.cargo
     unzip
     ripgrep
     fd
@@ -26,22 +26,6 @@
     yt-dlp
     chezmoi
   ];
-
-  # xdg.configFile."nvim/lua".source = ./nvim/lua;
-
-  # xdg.configFile."nvim/lua".onChange = ''
-  #   echo ":: NEOVIM - Run Packer Sync"
-  #   nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
-  # '';
-
-  # programs.neovim = {
-  #   enable = true;
-  #   extraConfig = ''
-  #     lua << EOF
-  #     ${lib.strings.fileContents ./nvim/init.lua}
-  #     EOF
-  #   '';
-  # };
   
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
