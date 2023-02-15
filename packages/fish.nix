@@ -19,14 +19,18 @@
       };
     }];
 
-     shellInit = ''
-         # nix
-         fenv source ~/.nix-profile/etc/profile.d/nix.sh
+    shellInit = ''
+      # nix
+      fenv source ~/.nix-profile/etc/profile.d/nix.sh
 
-         if test -e /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
-             fenv source /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
-         end
-     '';
+      if test -e /home/isaaki/.nix-profile/etc/profile.d/nix.sh
+        fenv source /home/isaaki/.nix-profile/etc/profile.d/nix.sh
+      end 
+      
+      if test -e /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
+         fenv source /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
+      end
+    '';
 
     shellAliases = {
       v = "$EDITOR";
