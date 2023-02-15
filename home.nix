@@ -43,6 +43,11 @@
     };
   };
 
+  # Add direnv and nix-direnv
+  programs.direnv.enable = true;
+  programs.direnv.nix-direnv.enable = true;
+  # optional for nix flakes support in home-manager 21.11, not required in home-manager unstable or 22.05
+  # programs.direnv.nix-direnv.enableFlakes = true;
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
@@ -57,6 +62,7 @@
     go
     pkgs-unstable.cargo
     unzip
+    zip
     ripgrep
     fd
     tree
@@ -64,15 +70,7 @@
     chezmoi
     delta
   ];
-  
-  # This value determines the Home Manager release that your
-  # configuration is compatible with. This helps avoid breakage
-  # when a new Home Manager release introduces backwards
-  # incompatible changes.
-  #
-  # You can update Home Manager without changing this value. See
-  # the Home Manager release notes for a list of state version
-  # changes in each release.
+
   home.stateVersion = "22.11";
 
   # Let Home Manager install and manage itself.
