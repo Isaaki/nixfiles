@@ -50,6 +50,7 @@
     gcc
     xclip
     nodejs
+    nodePackages.react-native-cli
     yarn
     python311
     python311Packages.pip
