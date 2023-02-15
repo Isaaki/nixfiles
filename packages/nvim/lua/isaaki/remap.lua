@@ -12,7 +12,7 @@ map("i", "jk", "<Esc>")
 
 map("n", "<leader>c", function()
 	-- vim.cmd("vnew $MYVIMRC")
-	vim.cmd("vnew ~/nixfiles/home/nvim/init.lua")
+	vim.cmd("vnew ~/nixfiles/packages/nvim/init.lua")
 end, { desc = "Open init.lua" })
 
 --Remap for dealing with word wrap
