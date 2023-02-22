@@ -11,6 +11,17 @@ cd <Git Directory>
 sudo nixos-rebuild switch --flake .#isaaki
 ```
 
+### Nix
+Install nix if not on NixOS [(Link to info)](https://nixos.org/download.html#download-nix) Linux OS should use this 
+```sh 
+sh <(curl -L https://nixos.org/nix/install) --daemon 
+```
+
+WSL should use this command 
+```sh 
+sh <(curl -L https://nixos.org/nix/install) --no-daemon 
+```
+
 ### Home Manager setup
 First time initialization (Do this once and never again)
 ```sh
