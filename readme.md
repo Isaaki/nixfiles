@@ -3,6 +3,11 @@
 - Shell: Fish
 - Editor: Neovim
 
+# Links
+- [NixOS Search](https://search.nixos.org/packages)
+- [Home-Manager Manual](https://nix-community.github.io/home-manager/index.html)
+- [Home-Manager Option Search](https://mipmip.github.io/home-manager-option-search/)
+
 ## Installing
 ### NixOS
 NixOS needs to do this first then follow **Home Manager setup**
