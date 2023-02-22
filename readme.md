@@ -29,11 +29,11 @@ echo "experimental-features = nix-command flakes" >> ~/.config/nix/nix.conf
 ```
 
 ### Home Manager setup
-First time initialization (Do this once and never again)
+Install Home-Manager and build flake
 ```sh
+nix-shell -p home-manager
 cd <Git Directory>
-nix --extra-experimental-features "nix-command flakes" build --no-link .#homeConfigurations.isaaki.activationPackage
-"$(nix --extra-experimental-features "nix-command flakes" path-info .#homeConfigurations.isaaki.activationPackage)"/activate
+home-manager switch --flake .#isaaki
 ```
 
 To update home-manager
