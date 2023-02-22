@@ -3,7 +3,7 @@
 - Shell: Fish
 - Editor: Neovim
 
-# Links
+## Links
 - [NixOS Search](https://search.nixos.org/packages)
 - [Home-Manager Manual](https://nix-community.github.io/home-manager/index.html)
 - [Home-Manager Option Search](https://mipmip.github.io/home-manager-option-search/)
