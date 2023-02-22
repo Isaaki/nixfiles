@@ -22,6 +22,12 @@ WSL should use this command
 sh <(curl -L https://nixos.org/nix/install) --no-daemon 
 ```
 
+Add flakes to experimental-features
+```sh
+mkdir -p ~/.config/nix
+echo "experimental-features = nix-command flakes" >> ~/.config/nix/nix.conf
+```
+
 ### Home Manager setup
 First time initialization (Do this once and never again)
 ```sh
