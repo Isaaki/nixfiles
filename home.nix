@@ -69,6 +69,11 @@
     yt-dlp
     chezmoi
     delta
+
+    # Browsers
+    firefox
+    chromium
+    brave
   ];
 
   home.stateVersion = "22.11";
