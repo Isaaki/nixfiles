@@ -58,17 +58,6 @@ return {
 		-- LSP setup
 		local lsp = require("lsp-zero")
 
-		-- lsp.extend_lspconfig({
-		-- 	capabilities = {
-		-- 		textDocument = {
-		-- 			foldingRange = {
-		-- 				dynamicRegistration = false,
-		-- 				lineFoldingOnly = true,
-		-- 			},
-		-- 		},
-		-- 	},
-		-- })
-
 		lsp.preset("lsp-compe")
 
 		lsp.set_preferences({

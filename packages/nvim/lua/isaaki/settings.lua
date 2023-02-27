@@ -38,15 +38,6 @@ vim.api.nvim_create_autocmd("BufEnter", {
 	end,
 })
 
--- Diable auto fold on file enter
-vim.api.nvim_create_autocmd({"BufReadPost", "FileReadPost"}, {
-  command = "normal zR",
-})
-
-vim.api.nvim_create_autocmd({"BufReadPost", "FileReadPost"}, {
-  command = "lua print('TEdasdasda123123')",
-})
-
 -- Highlight on yank
 local yankGrp = vim.api.nvim_create_augroup("YankHighlight", { clear = true })
 vim.api.nvim_create_autocmd("TextYankPost", {
