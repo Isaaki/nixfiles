@@ -38,16 +38,21 @@ vim.api.nvim_create_autocmd("BufEnter", {
 	end,
 })
 
+-- Diable auto fold on file enter
+vim.api.nvim_create_autocmd({"BufReadPost", "FileReadPost"}, {
+  command = "normal zR",
+})
+
+vim.api.nvim_create_autocmd({"BufReadPost", "FileReadPost"}, {
+  command = "lua print('TEdasdasda123123')",
+})
+
 -- Highlight on yank
-vim.api.nvim_exec(
-	[[
-    augroup YankHighlight
-      autocmd!
-      autocmd TextYankPost * silent! lua vim.highlight.on_yank()
-    augroup end
-  ]],
-	false
-)
+local yankGrp = vim.api.nvim_create_augroup("YankHighlight", { clear = true })
+vim.api.nvim_create_autocmd("TextYankPost", {
+  command = "silent! lua vim.highlight.on_yank()",
+  group = yankGrp,
+})
 
 if vim.fn.has("wsl") == 1 then
 	vim.api.nvim_exec(

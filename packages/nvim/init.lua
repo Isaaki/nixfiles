@@ -48,6 +48,8 @@ return require("packer").startup(function(use)
 		use(require("isaaki/plugins/toggleterm"))
 		use(require("isaaki/plugins/project"))
 		use(require("isaaki/plugins/gitsigns"))
+		use(require("isaaki/plugins/nvim-ufo"))
+
 	end
 
 	if packer_bootstrap then

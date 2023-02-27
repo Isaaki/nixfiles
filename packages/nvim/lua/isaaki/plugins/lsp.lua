@@ -56,8 +56,19 @@ return {
 		})
 
 		-- LSP setup
-
 		local lsp = require("lsp-zero")
+
+		-- lsp.extend_lspconfig({
+		-- 	capabilities = {
+		-- 		textDocument = {
+		-- 			foldingRange = {
+		-- 				dynamicRegistration = false,
+		-- 				lineFoldingOnly = true,
+		-- 			},
+		-- 		},
+		-- 	},
+		-- })
+
 		lsp.preset("lsp-compe")
 
 		lsp.set_preferences({
@@ -74,6 +85,7 @@ return {
 			-- "prettierd",
 			-- "stylua",
 		})
+
 
 		lsp.on_attach(function(client, bufnr)
 			map("n", "gD", function()
@@ -114,7 +126,5 @@ return {
 
 			-- map('n', 'gi', vim.lsp.buf.implementation, { buffer = bufnr, desc = ""})
 		end)
-
-		lsp.setup()
 	end,
 }
