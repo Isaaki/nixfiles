@@ -50,7 +50,8 @@ return {
 
 		null_ls.setup({
 			sources = {
-				null_ls.builtins.formatting.prettierd.with({ extra_args = { "--single-quote" } }),
+				-- null_ls.builtins.formatting.prettierd.with({ extra_args = { "--single-quote" } }),
+        null_ls.builtins.formatting.prettier.with({ extra_args = { "--single-quote" } }),
 				null_ls.builtins.formatting.stylua,
 			},
 		})
@@ -108,6 +109,7 @@ return {
 				vim.lsp.buf.references()
 			end, { buffer = bufnr, desc = "References [LSP]" })
 			map("n", "<leader>f", function()
+        print("TEST Format")
 				lsp_formatting(bufnr)
 			end, { buffer = bufnr, desc = "Format document [LSP]" })
 
@@ -115,5 +117,7 @@ return {
 
 			-- map('n', 'gi', vim.lsp.buf.implementation, { buffer = bufnr, desc = ""})
 		end)
+
+    lsp.setup()
 	end,
 }
