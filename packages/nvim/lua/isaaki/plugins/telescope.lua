@@ -1,7 +1,7 @@
 return {
 	"nvim-telescope/telescope.nvim",
-	tag = "0.1.0",
-	requires = { { "nvim-lua/plenary.nvim" } },
+	version = "0.1.0",
+	dependencies = { "nvim-lua/plenary.nvim" },
 	config = function()
 		local map = function(mode, lhs, rhs, opts)
 			if opts ~= nil then
