@@ -31,19 +31,20 @@ require("lazy").setup({
 	require("isaaki/plugins/whichkey"),
 	require("isaaki/plugins/neodev"),
 
-	if not vim.g.vscode then
-		use(require("isaaki/plugins/autopairs"))
-		use(require("isaaki/plugins/bufferline"))
-		use(require("isaaki/plugins/colors"))
-		use(require("isaaki/plugins/nvim-cmp"))
-		use(require("isaaki/plugins/harpoon"))
-		use(require("isaaki/plugins/lsp"))
-		use(require("isaaki/plugins/lualine"))
-		use(require("isaaki/plugins/telescope"))
-		use(require("isaaki/plugins/undotree"))
-		use(require("isaaki/plugins/trouble"))
-		use(require("isaaki/plugins/toggleterm"))
-		use(require("isaaki/plugins/project"))
-		use(require("isaaki/plugins/gitsigns"))
-	end
-
+	-- if not vim.g.vscode then
+	require("isaaki/plugins/colors"),
+	require("isaaki/plugins/autopairs"),
+	require("isaaki/plugins/bufferline"),
+	require("isaaki/plugins/colors"),
+	require("isaaki/plugins/nvim-cmp"),
+	require("isaaki/plugins/harpoon"),
+	require("isaaki/plugins/lsp"),
+	require("isaaki/plugins/lualine"),
+	require("isaaki/plugins/telescope"),
+	require("isaaki/plugins/undotree"),
+	require("isaaki/plugins/trouble"),
+	require("isaaki/plugins/toggleterm"),
+	require("isaaki/plugins/project"),
+	require("isaaki/plugins/gitsigns"),
+	-- end
+})
