@@ -10,10 +10,18 @@ vim.g.mapleader = " "
 -- Exit nvim
 map("i", "jk", "<Esc>")
 
-map("n", "<leader>c", function()
-	-- vim.cmd("vnew $MYVIMRC")
-	vim.cmd("vnew ~/nixfiles/packages/nvim/init.lua")
-end, { desc = "Open init.lua" })
+if (not vim.fn.has('macunix'))
+then
+	map("n", "<leader>c", function()
+		-- vim.cmd("vnew $MYVIMRC")
+		vim.cmd("vnew ~/nixfiles/packages/nvim/init.lua")
+	end, { desc = "Open init.lua" })
+else
+	map("n", "<leader>c", function()
+		-- vim.cmd("vnew $MYVIMRC")
+		vim.cmd("vnew ~/AppData/Local/nvim/init.lua")
+	end, { desc = "Open init.lua" })
+end
 
 --Remap for dealing with word wrap
 map("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
