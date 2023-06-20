@@ -16,7 +16,6 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	-- Basic plugins (No Config)
-	"JoosepAlviste/nvim-ts-context-commentstring",
 	"lewis6991/impatient.nvim",
 	{ "mg979/vim-visual-multi", branch = "master" },
 	"vim-scripts/ReplaceWithRegister",
@@ -26,10 +25,8 @@ require("lazy").setup({
 	require("isaaki/plugins/eyeliner"),
 	require("isaaki/plugins/indent-tools"),
 	require("isaaki/plugins/surround"),
-	require("isaaki/plugins/textobjects"),
 	require("isaaki/plugins/treesitter"),
 	require("isaaki/plugins/whichkey"),
-	require("isaaki/plugins/neodev"),
 
 	-- if not vim.g.vscode then
 	require("isaaki/plugins/colors"),
@@ -39,6 +36,7 @@ require("lazy").setup({
 	require("isaaki/plugins/nvim-cmp"),
 	require("isaaki/plugins/harpoon"),
 	require("isaaki/plugins/lsp"),
+	require("isaaki/plugins/neodev"),
 	require("isaaki/plugins/lualine"),
 	require("isaaki/plugins/telescope"),
 	require("isaaki/plugins/undotree"),
@@ -48,3 +46,4 @@ require("lazy").setup({
 	require("isaaki/plugins/gitsigns"),
 	-- end
 })
+
