@@ -109,7 +109,6 @@ return {
 				vim.lsp.buf.references()
 			end, { buffer = bufnr, desc = "References [LSP]" })
 			map("n", "<leader>f", function()
-        print("TEST Format")
 				lsp_formatting(bufnr)
 			end, { buffer = bufnr, desc = "Format document [LSP]" })
 
