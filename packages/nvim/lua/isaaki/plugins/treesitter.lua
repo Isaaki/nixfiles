@@ -33,13 +33,13 @@ return {
 			},
 		})
 
-		-- vim.opt.foldmethod = "expr"
-		-- vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
-		--
-		-- -- Diable auto fold on file enter
-		-- vim.api.nvim_create_autocmd({ "BufReadPost", "FileReadPost" }, {
-		-- 	command = "normal zR",
-		-- })
+		vim.opt.foldmethod = "expr"
+		vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+
+		-- Diable auto fold on file enter
+		vim.api.nvim_create_autocmd({ "BufReadPost", "FileReadPost" }, {
+			command = "normal zR",
+		})
 
 		if not vim.g.vscode then
 			require("treesitter-context").setup({
