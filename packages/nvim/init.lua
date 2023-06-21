@@ -42,7 +42,6 @@ require("lazy").setup({
 	require("isaaki/plugins/undotree"),
 	require("isaaki/plugins/trouble"),
 	require("isaaki/plugins/toggleterm"),
-	require("isaaki/plugins/project"),
 	require("isaaki/plugins/gitsigns"),
 	-- end
 })
