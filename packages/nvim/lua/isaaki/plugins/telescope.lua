@@ -1,7 +1,7 @@
 return {
 	"nvim-telescope/telescope.nvim",
 	version = "0.1.0",
-	dependencies = { "nvim-lua/plenary.nvim" },
+	dependencies = { "nvim-lua/plenary.nvim", "ahmedkhalf/project.nvim" },
 	config = function()
 		local map = function(mode, lhs, rhs, opts)
 			if opts ~= nil then
@@ -25,5 +25,12 @@ return {
 		map("n", "<leader>h", builtin.help_tags, { desc = "Help [Telescope]" })
 		map("n", "<leader>ok", builtin.keymaps, { desc = "Keymaps [Telescope]" })
 		map("n", "<leader>or", builtin.oldfiles, { desc = "Recent files [Telescope]" })
+
+
+		-- Project.nvim
+		require("project_nvim").setup()
+		require("telescope").load_extension("projects")
+
+		map("n", "<leader>op", require'telescope'.extensions.projects.projects, {desc = "Projects [Project.nvim]"})
 	end,
 }
