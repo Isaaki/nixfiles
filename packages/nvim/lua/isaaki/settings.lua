@@ -31,6 +31,8 @@ vim.opt.cursorline = true
 
 vim.opt.splitright = true
 
+vim.g.editorconfig_charset = "utf-8"
+
 -- Disable comment on newline
 vim.api.nvim_create_autocmd("BufEnter", {
 	callback = function()
