@@ -9,6 +9,18 @@
 - [Home-Manager Option Search](https://mipmip.github.io/home-manager-option-search/)
 
 ## Installing
+### Cloning
+Clone project to home directory
+```sh
+cd ~/
+git clone git@github.com:Isaaki/nixfiles.git
+```
+If nvim config is empty use these commands to fix it
+```sh
+git submodule init
+git submodule update
+```
+
 ### NixOS
 NixOS needs to do this first then follow **Home Manager setup**
 ```sh
@@ -20,11 +32,13 @@ sudo nixos-rebuild switch --flake .#isaaki
 
 ### Nix
 Install nix if not on NixOS [(Link to info)](https://nixos.org/download.html#download-nix) Linux OS should use this 
-```sh 
+```sh
+# Clone the repo in home dir
+git clone git@github.com:Isaaki/nixfiles.git
 sh <(curl -L https://nixos.org/nix/install) --daemon 
 ```
 
-WSL should use this command 
+**WSL** should use this command 
 ```sh 
 sh <(curl -L https://nixos.org/nix/install) --no-daemon 
 ```
