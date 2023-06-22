@@ -12,6 +12,8 @@
 ### NixOS
 NixOS needs to do this first then follow **Home Manager setup**
 ```sh
+# Clone the repo in home dir
+git clone git@github.com:Isaaki/nixfiles.git
 cd <Git Directory>
 sudo nixos-rebuild switch --flake .#isaaki
 ```
