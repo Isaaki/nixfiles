@@ -24,7 +24,7 @@
   # Basic Git configuration
   programs.git = {
     enable = true;
-    userName = "Isak Mella";
+    userName = "Isaaki";
     userEmail = "xisaacnewton1x@gmail.com";
     aliases = {
       uncommit = "reset --soft HEAD^";
